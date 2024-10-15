@@ -1,0 +1,74 @@
+CSS Selectors
+CSS selectors are used to target specific HTML elements to which styles should be applied. They act as a way to identify elements based on their tags, classes, IDs, attributes, or other criteria.
+
+Types of CSS Selectors
+Element Selectors: Target elements based on their tag name.
+
+Example: h1 targets all <h1> elements.
+Class Selectors: Target elements with a specific class attribute.
+
+Example: .my-class targets all elements with the class "my-class".
+ID Selectors: Target a single element with a unique ID attribute.
+
+Example: #my-id targets the element with the ID "my-id".
+Attribute Selectors: Target elements based on their attributes.
+
+Example: [href] targets all elements with an href attribute.
+Pseudo-Class Selectors: Target elements based on their state or position.
+
+Example: :hover targets an element when the mouse hovers over it.
+Example HTML Document
+HTML
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Selectors Example</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 class="heading">Heading 1</h1>
+    <h2 id="subheading">Heading 2</h2>
+    <p>This is a paragraph.</p>
+    <a href="https://example.com">Link</a>
+    <div class="container">
+        <p class="paragraph">Paragraph in container</p>
+    </div>
+</body>
+</html>
+Use code with caution.
+
+CSS Rules
+CSS
+h1 {
+    color: blue;
+}
+
+.heading {
+    font-size: 24px;
+}
+
+#subheading {
+    font-weight: bold;
+}
+
+a[href] {
+    text-decoration: underline;
+}
+
+.container p {
+    color: green;
+}
+
+p:first-child {
+    font-style: italic;
+}
+Use code with caution.
+
+Explanation:
+h1: Targets all <h1> elements and sets their color to blue.
+.heading: Targets elements with the class "heading" and sets their font size to 24px.
+#subheading: Targets the element with the ID "subheading" and sets its font weight to bold.
+a[href]: Targets all elements with an href attribute and underlines their text.
+.container p: Targets <h2> elements within the element with the class "container" and sets their color to green.
+p:first-child: Targets the first <h2> element within its parent and sets its font style to italic.
+By understanding and effectively using CSS selectors, you can precisely target and style specific elements in your HTML documents, creating visually appealing and well-structured web pages.

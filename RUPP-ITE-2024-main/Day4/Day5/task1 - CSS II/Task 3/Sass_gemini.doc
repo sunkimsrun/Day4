@@ -1,0 +1,71 @@
+Sass: A Superset of CSS
+Sass is a CSS preprocessor that extends the capabilities of standard CSS by adding features like variables, nested rules, mixins, functions, and more. It allows developers to write CSS in a more organized, efficient, and maintainable way.
+
+Key Differences Between Sass and Regular CSS
+Variables: Sass allows you to define variables to store values that can be reused throughout your stylesheet. This makes it easier to manage and update styles.
+Nesting: Sass supports nested rules, which can improve code readability and organization. You can nest selectors within other selectors, creating a hierarchical structure.
+Mixins: Mixins are reusable blocks of CSS code that can be included in multiple places. This helps reduce code duplication and makes it easier to manage styles.
+Functions: Sass provides built-in functions and allows you to define custom functions to perform calculations or manipulate values.
+Partials: Sass uses partial files (files with a _ prefix) to organize your stylesheets into smaller, more manageable components. These partials can be imported into other files.
+Example: Sass File Demonstrating Nesting, Partials, and Imports
+styles.scss:
+
+SCSS
+@import "partials/base";
+@import "partials/buttons";
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  .button {
+    background-color: $primary-color;
+    color: white;
+    padding: 10px 20px;
+    border: none;   
+
+    cursor: pointer;
+  }
+}
+Use code with caution.
+
+partials/base.scss:
+
+SCSS
+$primary-color: #007bff;
+Use code with caution.
+
+partials/buttons.scss:
+
+SCSS
+.button {
+  display: inline-block;
+  border-radius: 5px;
+}
+Use code with caution.
+
+Compiled CSS:
+
+CSS
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container .button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 5px;
+}
+Use code with caution.
+
+Notable Differences from Standard CSS
+Nested Rules: The Sass code uses nested rules to define the .button class within the .container class. This improves code readability and organization.
+Partials and Imports: The Sass file imports partial files (base.scss and buttons.scss) to organize the code into smaller, reusable components. This makes the code more modular and easier to maintain.
+Variables: The $primary-color variable is defined in the base.scss partial and used in the buttons.scss partial. This allows you to easily change the primary color throughout your stylesheet.
+Compiled CSS: The compiled CSS output flattens the nested rules and replaces the variable with its value. This results in standard CSS that can be understood by browsers.
+As you can see, Sass provides a more efficient and organized way to write CSS, making it easier to manage and maintain large-scale projects.

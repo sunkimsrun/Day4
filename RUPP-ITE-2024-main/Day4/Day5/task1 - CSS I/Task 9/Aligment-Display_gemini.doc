@@ -1,0 +1,70 @@
+CSS Alignment and Display Properties
+CSS provides various methods to align elements horizontally and vertically, as well as control their layout behavior.
+
+Horizontal Alignment
+text-align: Aligns the content within an element (typically used for text).
+Values: left, center, right, justify
+margin-left and margin-right: Add space on the left and right sides of an element.
+float: Positions an element to the left or right of its container, allowing other elements to wrap around it.
+Values: left, right, none
+flex: Aligns items within a flex container using the justify-content property.
+Values: flex-start, flex-end, center, space-between, space-around
+Vertical Alignment
+vertical-align: Aligns an inline element relative to its baseline.
+Values: top, middle, bottom, baseline
+line-height: Sets the line height for an element, affecting vertical spacing between lines of text.
+flex: Aligns items within a flex container using the align-items property.
+Values: flex-start, flex-end, center, stretch, baseline
+Display Properties
+block: Elements are displayed as blocks, taking up the full width of their container and starting on a new line.
+inline: Elements are displayed inline, without starting on a new line.
+inline-block: Elements are displayed inline, but allow setting width and height.
+flex: Creates a flex container, allowing flexible item layout and alignment.
+Example
+HTML
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Alignment Example</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .item {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+
+        .inline-block-item {
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Alignment Example</h1>
+
+    <div class="container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+
+    <div class="inline-block-container">
+        <div class="inline-block-item">Inline Block Item 1</div>
+        <div class="inline-block-item">Inline Block Item 2</div>
+    </div>
+</body>
+</html>
+Use code with caution.
+
+Explanation
+Flex Container: The .container div uses display: flex to create a flex container. justify-content: space-between distributes items evenly with space between them, and align-items: center vertically centers the items.
+Text Alignment: The .item divs use text-align: center to center the text within each item.
+Inline-Block: The .inline-block-item divs use display: inline-block to display them inline but allow setting width and height. vertical-align: top aligns them vertically to the top.
+This example demonstrates various alignment techniques using CSS, including horizontal and vertical alignment within flex containers and inline elements. By understanding these methods, you can effectively control the layout and appearance of elements on your web pages.

@@ -1,0 +1,56 @@
+What is CSS?
+Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML. CSS controls the layout of multiple web pages all at once and enhances the appearance of websites by allowing developers to apply styles such as colors, fonts, spacing, and positioning.
+
+Role of CSS in Web Development
+Separation of Content and Presentation: CSS separates the content (HTML) from the presentation (styles), making it easier to maintain and update a website's look without altering its structure.
+
+Consistency: CSS allows developers to apply a consistent style across multiple web pages. Changes made to the CSS file reflect immediately across all linked pages.
+
+Responsive Design: CSS provides tools such as media queries that allow developers to create layouts that adapt to different screen sizes and devices.
+
+Improved Performance: By reducing the amount of HTML markup required for styling, CSS can help improve the loading speed and performance of web pages.
+
+Visual Effects: CSS enables the creation of complex visual effects, transitions, and animations, enhancing user experience.
+
+Simple HTML Document with Basic CSS Stylesheet
+Here's a simple HTML document with an embedded CSS stylesheet that changes the background color, text color, and font size of the page:
+
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple CSS Example</title>
+    <style>
+        /* CSS Styles */
+        body {
+            background-color: lightblue; /* Changes the background color of the page */
+            color: darkblue;              /* Sets the text color to dark blue */
+            font-size: 20px;             /* Increases the font size to 20 pixels */
+            font-family: Arial, sans-serif; /* Sets the font family to Arial, with a fallback to sans-serif */
+            text-align: center;          /* Centers the text horizontally on the page */
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Web Page!</h1>
+    <p>This is a simple example of using CSS with HTML.</p>
+</body>
+</html>
+Explanation of Each Part of the CSS Code
+body { ... }: This selector targets the <body> element of the HTML document, applying styles that affect the entire page.
+
+background-color: lightblue;: This property sets the background color of the page to light blue.
+
+color: darkblue;: This property changes the text color to dark blue, making it stand out against the light blue background.
+
+font-size: 20px;: This property increases the font size of the text to 20 pixels, making it more readable.
+
+font-family: Arial, sans-serif;: This property sets the font family to Arial, with a fallback to any available sans-serif font. It improves text aesthetics and readability.
+
+text-align: center;: This property centers the text horizontally within the body of the page, giving it a more polished look.
+
+Conclusion
+By using CSS, web developers can enhance the visual appeal of websites and ensure a consistent user experience across various devices and screen sizes. This example illustrates how to use CSS to style an HTML document effectively.

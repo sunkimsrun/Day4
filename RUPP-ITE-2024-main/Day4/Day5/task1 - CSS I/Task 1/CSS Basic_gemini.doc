@@ -1,0 +1,53 @@
+CSS: Cascading Style Sheets
+CSS stands for Cascading Style Sheets. It's a language used to style HTML elements. It controls the layout, design, and appearance of a web page. Think of it as the "makeup" for your web content.
+
+Role of CSS in Web Development:
+Separating Content from Style: CSS allows you to keep the structure (HTML) of your web page separate from its presentation (CSS), making it easier to maintain and update.
+Consistent Appearance: By applying styles to multiple elements, you can ensure a consistent look and feel throughout your website.
+Responsiveness: CSS can be used to create responsive designs that adapt to different screen sizes.
+Enhanced User Experience: Well-designed CSS can improve the user experience by making the website visually appealing and easy to navigate.
+Creating a Simple HTML Document with CSS
+HTML Document (index.html):
+
+HTML
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Simple Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Hello, World!</h1>
+    <p>This is a paragraph.</p>
+</body>
+</html>
+Use code with caution.
+
+CSS Stylesheet (styles.css):
+
+CSS
+body {
+    background-color: lightblue;
+}
+
+h1 {
+    color: red;
+    font-size: 40px;
+}
+
+p {
+    color: green;
+    font-size: 20px;
+}
+Use code with caution.
+
+Explanation of CSS Code:
+body selector: This targets the <body> element of the HTML document.
+background-color: lightblue;: Sets the background color of the entire page to light blue.
+h1 selector: This targets all elements with the tag <h1>.
+color: red;: Sets the color of the <h1> text to red.
+font-size: 40px;: Sets the font size of the <h1> text to 40 pixels.
+p selector: This targets all elements with the tag <p>.
+color: green;: Sets the color of the <p> text to green.
+font-size: 20px;: Sets the font size of the <p> text to 20 pixels.
+When you open the index.html file in a web browser, you'll see the text "Hello, World!" in red and a larger font size, and the paragraph text in green and a smaller font size, all on a light blue background. This demonstrates how CSS can be used to style HTML elements to create a visually appealing web page.

@@ -1,0 +1,51 @@
+Styling Text and Fonts in CSS
+CSS provides a wide range of properties to control the appearance of text on web pages. Here are some common properties and an example demonstrating their usage:
+
+Common Text Properties
+font-family: Sets the font family to be used for the text.
+font-size: Sets the size of the text.
+font-weight: Sets the boldness of the text (e.g., normal, bold, bolder).
+text-align: Sets the alignment of the text within its container (e.g., left, center, right).
+color: Sets the color of the text.
+text-decoration: Adds decorations to the text (e.g., underline, line-through).
+Example HTML Document
+HTML
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Styling Example</title>
+    <style>
+        h1 {
+            font-family: Arial, sans-serif;
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        p {
+            font-family: Verdana, sans-serif;
+            font-size: 18px;
+            color: #444;
+            text-align: justify;
+        }
+
+        a {
+            color: blue;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>This is a Heading</h1>
+    <p>This is a paragraph of text.</p>
+    <p>This is another paragraph.</p>
+    <a href="https://example.com">Link to Example Website</a>
+</body>
+</html>
+Use code with caution.
+
+Explanation
+h1: Sets the font family to Arial (or a similar sans-serif font if Arial is not available), the font size to 36 pixels, the font weight to bold, and the text alignment to center.
+p: Sets the font family to Verdana (or a similar sans-serif font), the font size to 18 pixels, the color to a dark gray (#444), and the text alignment to justify (which aligns the text to both the left and right margins).
+a: Sets the color of links to blue and underlines them.
+This example demonstrates how CSS can be used to customize the appearance of text elements on a web page, making it more visually appealing and readable. You can experiment with different combinations of properties to achieve the desired style for your content.

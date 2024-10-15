@@ -1,0 +1,94 @@
+Inline, Internal, and External CSS
+CSS can be applied to HTML elements in three primary ways: inline, internal, and external.
+
+Inline CSS
+Definition: Styles are directly applied to individual HTML elements using the style attribute.
+Example:
+HTML
+<h1 style="color: red; font-size: 36px;">Hello, World!</h1>
+Use code with caution.
+
+Advantages:
+Quick and easy for simple style changes.
+Disadvantages:
+Poor maintainability: Styles are scattered throughout the HTML code.
+Difficult for complex styling or reuse.
+Internal CSS
+Definition: Styles are defined within the <head> section of an HTML document using a <style> tag.
+Example:
+HTML
+<head>
+    <style>
+        h1 {
+            color: blue;
+            font-size: 24px;
+        }
+    </style>
+</head>
+Use code with caution.
+
+Advantages:
+Better organization than inline styles.
+Suitable for simple to moderately complex styling.
+Disadvantages:
+Styles are specific to the HTML document.
+Not ideal for large or complex websites.
+External CSS
+Definition: Styles are defined in a separate .css file and linked to the HTML document using the <link> tag.
+Example:
+HTML
+<head>
+    <link rel="stylesheet"   
+ href="styles.css">
+</head>
+Use code with caution.
+
+styles.css:
+CSS
+h1 {
+    color: green;
+    font-size: 18px;
+}
+Use code with caution.
+
+Advantages:
+Separation of concerns: HTML and CSS are kept separate.
+Improved maintainability and reusability.
+Ideal for large or complex websites.
+Disadvantages:
+Requires additional file management.
+May slightly increase initial loading time.
+Demonstrating All Three Methods
+HTML
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Styles</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 style="color: red; font-size: 36px;">Inline Style</h1>
+    <h2 style="color: blue;">Inline Style</h2>
+
+    <h1 style="color: green;">Internal Style</h1>
+    <h2 style="color: purple;">Internal Style</h2>
+
+    <h1 style="color: orange;">External Style</h1>
+    <h2 style="color: pink;">External Style</h2>
+</body>
+</html>
+Use code with caution.
+
+styles.css:
+
+CSS
+h1 {
+    color: orange;
+    font-size: 18px;
+}
+h2 {
+    color: pink;
+}
+Use code with caution.
+
+This example demonstrates how the same styles can be applied using different methods. The choice of method often depends on the complexity of the styling, the size of the website, and personal preferences.

@@ -1,0 +1,170 @@
+Variables and Functions in Sass
+Variables and functions in Sass allow you to create reusable values and logic in your styles, which helps maintain consistency and reduce redundancy. They also make it easy to make global changes across your stylesheets by modifying a single value or function.
+
+1. Variables in Sass
+Variables in Sass are declared using the $ symbol. Variables can store values like colors, fonts, or sizes, which can then be reused throughout the stylesheet. This allows you to maintain a consistent design without hardcoding the same value multiple times.
+
+Example: Declaring and Using Variables
+scss
+Copy code
+// Declaring variables
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$font-size-large: 24px;
+
+// Using variables
+body {
+  font-family: Arial, sans-serif;
+  background-color: $primary-color;
+  color: $secondary-color;
+}
+
+h1 {
+  font-size: $font-size-large;
+}
+In this example:
+
+$primary-color is used for the background color of the body.
+$secondary-color is used for the text color.
+$font-size-large is applied to the h1 element.
+2. Functions in Sass
+Sass functions allow you to perform calculations and manipulations on values like colors, numbers, and strings. Sass includes a number of built-in functions (e.g., lighten(), darken(), round(), etc.), and you can also define custom functions.
+
+Example: Declaring and Using a Custom Function
+scss
+Copy code
+// Define a custom function to calculate padding
+@function calculate-padding($base-padding, $multiplier) {
+  @return $base-padding * $multiplier;
+}
+
+// Variables
+$base-padding: 10px;
+
+// Use the function
+.container {
+  padding: calculate-padding($base-padding, 2);  // Output will be 20px
+}
+
+.card {
+  padding: calculate-padding($base-padding, 3);  // Output will be 30px
+}
+In this example:
+
+The custom function calculate-padding takes two arguments: $base-padding and $multiplier. It multiplies the base padding value by the multiplier and returns the result.
+The function is used in .container and .card to dynamically calculate padding based on the multiplier.
+3. Inheritance in Sass
+Inheritance allows one selector to inherit the styles of another selector. This reduces duplication by allowing shared styles to be defined once and then applied to multiple elements. Sass implements inheritance using the @extend directive.
+
+Example: Inheritance in Sass
+scss
+Copy code
+// Base class
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: $primary-color;
+  color: white;
+  font-size: 16px;
+}
+
+// Inheriting styles from .button
+.btn-primary {
+  @extend .button;
+  background-color: $primary-color;
+}
+
+.btn-secondary {
+  @extend .button;
+  background-color: $secondary-color;
+}
+In this example:
+
+The base class .button contains shared styles for buttons, such as padding, border, background color, etc.
+.btn-primary and .btn-secondary use @extend to inherit all styles from .button and then apply their own specific background colors ($primary-color and $secondary-color, respectively).
+This inheritance mechanism ensures that common styles are reused without repeating them, making the code more DRY (Don’t Repeat Yourself) and easier to maintain.
+
+Full Example: Variables, Functions, and Inheritance
+scss
+Copy code
+// Variables
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$font-size-large: 24px;
+$base-padding: 10px;
+
+// Function to calculate padding
+@function calculate-padding($base-padding, $multiplier) {
+  @return $base-padding * $multiplier;
+}
+
+// Base button class
+.button {
+  padding: calculate-padding($base-padding, 2);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+}
+
+// Extend button for specific styles
+.btn-primary {
+  @extend .button;
+  background-color: $primary-color;
+}
+
+.btn-secondary {
+  @extend .button;
+  background-color: $secondary-color;
+}
+
+// Use variables for heading and body styles
+body {
+  background-color: lighten($primary-color, 40%);
+  color: darken($primary-color, 20%);
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-size: $font-size-large;
+  color: $primary-color;
+}
+Resulting Compiled CSS
+css
+Copy code
+body {
+  background-color: #b3d6f0;
+  color: #1c5a8d;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-size: 24px;
+  color: #3498db;
+}
+
+.button, .btn-primary, .btn-secondary {
+  padding: 20px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+}
+
+.btn-primary {
+  background-color: #3498db;
+}
+
+.btn-secondary {
+  background-color: #2ecc71;
+}
+Key Benefits of Using Variables, Functions, and Inheritance
+Variables: Help you manage colors, fonts, and other values more easily, improving consistency across your styles. You can change a single value (e.g., a color) and have that change apply throughout your entire stylesheet.
+
+Functions: Provide a way to write dynamic, reusable logic for calculations or value manipulation. This simplifies the code and reduces hardcoded values.
+
+Inheritance: Avoids redundancy by allowing shared styles to be inherited by multiple elements, which simplifies your stylesheet and makes it easier to maintain.
+
+Conclusion
+Sass provides powerful features like variables, functions, and inheritance to enhance the flexibility and maintainability of CSS. Variables ensure consistent values, functions allow for dynamic calculations, and inheritance enables the reuse of common styles, making Sass a valuable tool for modern web development.

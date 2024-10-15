@@ -1,0 +1,60 @@
+Online Fonts
+Online fonts are font files that are hosted on a remote server and can be accessed and used on websites without needing to be downloaded and installed locally. This offers the advantage of providing a consistent font experience across different devices and browsers.
+
+Using Google Fonts
+Google Fonts is a popular service that provides a vast library of free, high-quality fonts. To use Google Fonts in your HTML document, follow these steps:
+
+Choose Fonts: Visit the Google Fonts website (fonts.google.com) and select the fonts you want to use.
+Generate Code: Click the "Select" button next to each font, then click the "View Code" button. This will generate a <link> tag that you need to include in your HTML document's <head> section.
+Include in HTML: Paste the generated <link> tag into the <head> section of your HTML document.
+Example:
+
+HTML
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Website</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Open+Sans">
+</head>
+<body>
+    <h1>Hello, World!</h1>
+    <p>This is a paragraph using Google Fonts.</p>
+</body>
+</html>
+Use code with caution.
+
+In this example, the Roboto and Open+Sans fonts from Google Fonts are included in the <head> section. You can then use these fonts in your CSS styles.
+
+Favicons
+A favicon is a small image that appears in the browser's tab or address bar, representing your website. It helps users identify your site among others.
+
+To add a favicon to your website, create a small square image (typically 16x16 or 32x32 pixels) and save it as a .ico file. Then, include the following <link> tag in the <head> section of your HTML document:
+
+HTML
+<link rel="shortcut icon" href="favicon.ico">
+Use code with caution.
+
+Replace favicon.ico with the actual name of your favicon file.
+
+Example:
+
+HTML
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Website</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+</head>
+<body>
+    </body>
+</html>
+Use code with caution.
+
+By following these steps, you can easily integrate online fonts like Google Fonts and add a favicon to your website, enhancing its visual appeal and branding.
+
+
+
+
+
+
+
