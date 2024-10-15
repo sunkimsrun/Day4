@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bouncing Ball</title>
+</head>
+<body>
+  <canvas id="myCanvas" width="400" height="300"></canvas>
+
+  <script>
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+
+    var ballX = 20;
+    var ballY = 20;
+    var ballRadius = 10;
+    var ballSpeedX = 2;
+    var ballSpeedY = 2;
+
+    var colors = ["red", "blue", "green", "yellow"];
+    var colorIndex = 0;
+
+    function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      ctx.beginPath();
+      ctx.arc(ballX, ballY, ballRadius, 0, 2 * Math.PI);
+      ctx.fillStyle = colors[colorIndex];
+      ctx.fill();
+
+      ballX += ballSpeedX;
+      ballY += ballSpeedY;
+
+      if (ballX + ballRadius > canvas.width || ballX - ballRadius < 0) {
+        ballSpeedX = -ballSpeedX;
+        colorIndex = (colorIndex + 1) % colors.length;
+      }
+
+      if (ballY + ballRadius > canvas.height || ballY - ballRadius < 0) {
+        ballSpeedY = -ballSpeedY;
+        colorIndex = (colorIndex + 1) % colors.length;
+      }
+    }
+
+    setInterval(draw, 10);
+  </script>
+</body>
+</html>

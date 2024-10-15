@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouncing Ball Game</title>
+    <style>
+        #myCanvas {
+            border: 1px solid black;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with game title -->
+    <header>
+        <h1>Bouncing Ball Game</h1>
+    </header>
+
+    <!-- Canvas for the game -->
+    <section>
+        <canvas id="myCanvas" width="600" height="400"></canvas>
+    </section>
+
+    <!-- Footer with contact information -->
+    <footer>
+        <p>Contact Information: </p>
+        <p>Email: yourname@example.com</p>
+    </footer>
+
+    <script>
+        // Set up the canvas and context
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // Ball properties
+        let ballRadius = 20;
+        let x = canvas.width / 2;
+        let y = canvas.height / 2;
+        let dx = 2;  // Horizontal velocity
+        let dy = 2;  // Vertical velocity
+        let ballColor = getRandomColor();
+
+        // Function to draw the ball
+        function drawBall() {
+            ctx.beginPath();
+            ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
+            ctx.fillStyle = ballColor;
+            ctx.fill();
+            ctx.closePath();
+        }
+
+        // Function to generate a random color
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        // Function to update the canvas on every frame
+        function updateCanvas() {
+            // Clear the canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Draw the ball
+            drawBall();
+
+            // Bounce off the walls and change color
+            if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
+                dx = -dx;  // Reverse direction
+                ballColor = getRandomColor();  // Change color
+            }
+            if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
+                dy = -dy;  // Reverse direction
+                ballColor = getRandomColor();  // Change color
+            }
+
+            // Update the ball position
+            x += dx;
+            y += dy;
+
+            // Request the next frame
+            requestAnimationFrame(updateCanvas);
+        }
+
+        // Start the animation
+        updateCanvas();
+    </script>
+</body>
+</html>

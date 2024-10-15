@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bouncing Ball</title>
+</head>
+<body>
+  <canvas id="myCanvas" width="400" height="300"></canvas>
+  <button id="getLocationButton">Show My Location</button>
+
+  <script>
+    // ... (previous code)
+
+    var getLocationButton = document.getElementById("getLocationButton");
+
+    getLocationButton.addEventListener("click", function() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } else {
+        alert("Geolocation is not supported by this browser.");
+      }
+    });
+
+    function showPosition(position) {
+      var latitude = position.coords.latitude;
+      var longitude = position.coords.longitude;
+      alert("Your location is: (" + latitude + ", " + longitude + ")");
+    }
+  </script>
+</body>
+</html>

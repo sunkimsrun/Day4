@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Drawing Example</title>
+</head>
+<body>
+    <!-- Header with name -->
+    <header>
+        <h1>Your Name</h1>
+    </header>
+
+    <!-- Section for canvas drawing -->
+    <section>
+        <h2>Canvas Drawing</h2>
+        <canvas id="myCanvas" width="400" height="400" style="border:1px solid #000000;"></canvas>
+    </section>
+
+    <!-- Footer with contact information -->
+    <footer>
+        <p>Contact Information: </p>
+        <p>Email: yourname@example.com</p>
+    </footer>
+
+    <script>
+        // Get the canvas element and its 2D drawing context
+        var canvas = document.getElementById('myCanvas');
+        var ctx = canvas.getContext('2d');
+
+        // Draw a rectangle
+        ctx.fillStyle = '#FF0000';  // Red color
+        ctx.fillRect(50, 50, 150, 100);  // (x, y, width, height)
+
+        // Draw a circle
+        ctx.beginPath();
+        ctx.arc(250, 200, 50, 0, 2 * Math.PI);  // (x, y, radius, startAngle, endAngle)
+        ctx.fillStyle = '#00FF00';  // Green color
+        ctx.fill();
+
+        // Draw a line
+        ctx.beginPath();
+        ctx.moveTo(100, 300);  // Starting point (x, y)
+        ctx.lineTo(300, 350);  // Ending point (x, y)
+        ctx.strokeStyle = '#0000FF';  // Blue color
+        ctx.lineWidth = 5;
+        ctx.stroke();  // Draw the line
+    </script>
+</body>
+</html>

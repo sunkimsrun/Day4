@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Form</title>
+</head>
+<body>
+  <h2>My Favorite Hobby</h2>
+  <p>My favorite hobby is reading. I love getting lost in a good book and exploring new worlds. There's something magical about escaping into a story and learning about different cultures and perspectives.</p>
+
+  <h3>Related Content</h3>
+  <div class="video-container">
+    <video id="myVideo" controls>
+      <source src="https://www.youtube.com/embed/YOUR_YOUTUBE_VIDEO_ID" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="video-controls">
+      <button onclick="playVideo()">Play</button>
+      <button onclick="pauseVideo()">Pause</button>
+      <input type="range" min="0" max="1" step="0.01" id="volumeControl" onchange="setVolume(this.value)">
+    </div>
+  </div>
+
+  <div class="audio-container">
+    <audio id="myAudio" controls>
+      <source src="YOUR_AUDIO_FILE.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <div class="audio-controls">
+      <button onclick="playAudio()">Play</button>
+      <button onclick="pauseAudio()">Pause</button>
+      <input type="range" min="0" max="1" step="0.01" id="volumeControlAudio" onchange="setVolumeAudio(this.value)">
+    </div>
+  </div>
+
+  <script>
+    var video = document.getElementById("myVideo");
+    var audio = document.getElementById("myAudio");
+
+    function playVideo() {
+      video.play();
+    }
+
+    function pauseVideo() {
+      video.pause();
+    }
+
+    function setVolume(volume) {
+      video.volume = volume;
+    }
+
+    function playAudio() {
+      audio.play();
+    }
+
+    function pauseAudio() {
+      audio.pause();
+    }
+
+    function setVolumeAudio(volume) {
+      audio.volume = volume;
+    }
+  </script>
+</body>
+</html>
